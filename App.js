@@ -1,34 +1,31 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { createAppContainer } from "react-navigation";
-import { createBottomTabNavigator } from "react-navigation-tabs";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-
-import ScanerScreen from "./screens/ScanScreen";
+import ScanScreen from './screens/ScanScreen';
 
 export default class App extends React.Component {
-  render() {
+  render(){
     return (
-
-      <AppContainer />
-
-
+      
+        <AppContainer />
+      
     );
-    
   }
 }
 
 const TabNavigator = createBottomTabNavigator({
-  Scan: { screen: ScanerScreen }
+  Scan: {screen: ScanScreen}
 });
 
-const AppContainer = createAppContainer(TabNavigator);
+const AppContainer =  createAppContainer(TabNavigator);
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "red",
-    alignItems: "center",
-    justifyContent: "center"
-  }
+    backgroundColor: 'red',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
